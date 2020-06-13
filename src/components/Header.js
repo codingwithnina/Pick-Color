@@ -1,15 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 
-function Header() {
- return(
+class Header extends Component {
+  render() {
+    return(
    <header style={headerStyle}>
      <h1>Colorpicker app</h1>
    </header>
- )
+    );
+  }
 }
 
 const headerStyle = {
-  background:'#666',
+  background:'#667',
   color: '#fff',
   textAlign: 'center',
   padding: '10px'

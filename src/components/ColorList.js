@@ -1,9 +1,26 @@
-import React from "react";
+import React, { Component } from 'react'
 
-function ColorList() {
-  return (
-    <h1>Lista</h1>
-  )
+class ColorList extends Component {
+  constructor() {
+    super()
+  
+    this.state = {
+      data: [],
+    };
+  }
+  
+
+  render() {
+    return (
+        <div>Lista boja
+          <ul>
+           <li>1.</li>
+           <li>2.</li>
+           <li>3.</li>
+          </ul>
+        </div>
+    );
+  }
 }
 
 export default ColorList;
