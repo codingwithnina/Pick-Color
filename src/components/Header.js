@@ -1,18 +1,10 @@
-import React from "react";
+import React from 'react';
 
-function Header() {
- return(
-   <header style={headerStyle}>
-     <h1>Colorpicker app</h1>
-   </header>
- )
+export const Header = () => {
+  return (
+    <div className="header">
+    <h1>Pick a color!</h1>
+    <img src="/rocket-icon.png" alt="Rocket" className="headerLogo" />
+    </div>
+  )
 }
-
-const headerStyle = {
-  background:'#666',
-  color: '#fff',
-  textAlign: 'center',
-  padding: '10px'
-}
-
-export default Header;

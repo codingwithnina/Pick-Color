@@ -1,9 +1,19 @@
-import React from "react";
+import React from 'react';
+// import {new_color} from './Picker';
 
-function ColorList() {
+export const Colorlist = () => {
+  // const color = new_color;
+
   return (
-    <h1>Lista</h1>
+    <div className="listColors">
+      <div>
+      <h5>Previous colors were:</h5>
+        <li>{}</li>
+        <li>{}</li>
+        <li>{}</li>
+        <li>{}</li>
+        <li>{}</li>
+      </div>
+    </div>
   )
 }
-
-export default ColorList;

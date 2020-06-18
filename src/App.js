@@ -1,27 +1,18 @@
-import React, { Component } from 'react';
-import ReactDOM from "react-dom";
-import Header from "./components/Header";
-import InputText from "./components/InputText";
-import Picker from "./components/Picker";
-import ColorList from "./components/ColorList";
+import React from 'react';
+import { Header } from './components/Header';
+import { Picker } from './components/Picker';
+import { Colorlist } from './components/Colorlist';
 
-import './App.css';
+import './App.scss';
 
-class App extends Component {
-  render() {
+function App() {
   return (
-    <div className="App">
-      <Header />
-      <div className="container">
-        <InputText />
-        <div className="separator"></div>
-        <Picker />
-        <div className="separator"></div>
-        <ColorList />
-      </div>
+    <div>
+    <Header />
+    <Picker />
+    <Colorlist />
     </div>
-    );
-  }
+  );
 }
 
 export default App;
