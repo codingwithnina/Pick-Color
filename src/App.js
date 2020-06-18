@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from './components/Header';
 import { Picker } from './components/Picker';
-import { Colorlist } from './components/Colorlist';
+import { Colorlist } from './components/ColorList';
 
 import './App.scss';
 

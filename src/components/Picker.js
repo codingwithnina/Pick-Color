@@ -1,7 +1,7 @@
 import React,{ useState, useEffect} from 'react';
  
 export const Picker = () => {
-  const [new_color, setColor] = useState([]);
+  const [new_color, setColor] = useState('#fff');
 
   useEffect(() => {
     async function fetchColor() {
@@ -10,23 +10,24 @@ export const Picker = () => {
       setColor(data.new_color)
     }
     fetchColor();
-  }, []);
- 
-  //  updateText(event) {
-  //    useState(event.target.value)
-  //  }
+    }, [])
+  
+  const handleClick = () => {
+    setColor(new_color); 
+  }
 
-  const color = new_color;
+  const colors = new_color;
 
   return (
     <div className="colorPick">
-      <button className="btn" onClick={() => setColor(new_color)}>Change</button> 
+      <button type="button" className="btn" onClick={(handleClick)}>Change</button> 
       <p>New color is: #{new_color}</p>
       <div className="inputArea">
         <h5>Write some text:</h5>
-        <textarea onChange={new_color}/>
+        <textarea style={{color: {new_color}}}/>
       </div>
-      Your old color is #{color}.
+      Your old color is #{colors}.
+  
     </div>
   )
 }
