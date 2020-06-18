@@ -1,10 +1,16 @@
 import React from 'react';
-import './App.css';
+import { Header } from './components/Header';
+import { Picker } from './components/Picker';
+import { Colorlist } from './components/Colorlist';
+
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Color picker</h1>
+    <div>
+    <Header />
+    <Picker />
+    <Colorlist />
     </div>
   );
 }
