@@ -21,7 +21,6 @@ export const Picker = () => {
   return (
     <div className="colorPick">
       <button className="btn" onClick={() => setColor(new_color)}>Change</button> 
-      {/* na onclick zelim vratit novu boju koja se onda pokazuje u paragrafu. a u inputu pisem tekst koji bude u novoj boji */}
       <p>New color is: #{new_color}</p>
       <div className="inputArea">
         <h5>Write some text:</h5>
