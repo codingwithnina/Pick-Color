@@ -6,7 +6,7 @@ export const Colorlist = () => {
   return (
     <div className="listColors">
       <div>
-      <h>Previous colors were:</h>
+      <h5>Previous colors were:</h5>
         <li></li>
         <li></li>
       </div>

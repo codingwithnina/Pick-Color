@@ -1,33 +1,32 @@
-import React,{ useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
  
 export const Picker = () => {
-  const [new_color, setColor] = useState('#fff');
-
-  useEffect(() => {
-    async function fetchColor() {
-      let res = await fetch('http://www.colr.org/json/color/random');
-      let data = await res.json();
-      setColor(data.new_color)
-    }
-    fetchColor();
-    }, [])
+  const [color, setColor] = useState('');
   
+  useEffect(async() => {
+      const response = await fetch('http://www.colr.org/json/color/random');
+      const data = await response.json();
+      const [item] = data.colors;
+      setColor(item.hex);
+      console.log(item.hex);
+    }, []);
+   
   const handleClick = () => {
-    setColor(new_color); 
+    const colors = setColor; 
   }
 
-  const colors = new_color;
 
   return (
     <div className="colorPick">
-      <button type="button" className="btn" onClick={(handleClick)}>Change</button> 
-      <p>New color is: #{new_color}</p>
+      <button type="button" className="btn" onClick={(handleClick)}>Change</button>
+      {color && <div>{color.hex}</div>}
+      <p>New color is: #{color}</p>
       <div className="inputArea">
         <h5>Write some text:</h5>
-        <textarea style={{color: {new_color}}}/>
+        <textarea style={{color: {color}}}/>
       </div>
-      Your old color is #{colors}.
+      <p>Your old color is #{color}.</p>
   
     </div>
-  )
+ )
 }
