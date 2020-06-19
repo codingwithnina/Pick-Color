@@ -1,15 +1,20 @@
 import React from 'react';
 
-export const Colorlist = () => {
-  // const colors = new_color;
+export const Colorlist = ({ history }) => {
+  let content = '';
+  if (history) {
+    content = history.map((color, index) => {
+      if (color !== '')
+        return <li>{ color }</li>
+    });
+  }
 
   return (
     <div className="listColors">
-      <div>
       <h5>Previous colors were:</h5>
-        <li></li>
-        <li></li>
-      </div>
+        <ul>
+          { content }
+        </ul>
     </div>
-  )
-}
+  );
+};
