@@ -6,6 +6,8 @@ export const Picker = ({ fetchColor, newColor, oldColor }) => {
    fetchColor();
   }
 
+  const textStyle = {newColor};
+
   return (
     <div className="colorPick">
       <button type="button" className="btn" onClick={ handleClick }>
@@ -13,7 +15,7 @@ export const Picker = ({ fetchColor, newColor, oldColor }) => {
       </button>
       <p>New color is: { newColor }</p>
       <h5>Write some text:</h5>
-      <textarea style={{ color:{ newColor } }} />
+      <textarea style={ textStyle } />
       <p>Your old color is: { oldColor }.</p>
     </div>
  );
